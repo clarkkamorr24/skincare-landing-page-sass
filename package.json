@@ -12,8 +12,8 @@
     "copy": "npm run copy:html && npm run copy:assets && npm run copy:js",
     "serve": "browser-sync start --server dist --files \"dist/**/*\" --no-notify",
     "prebuild": "mkdirp dist/css dist/js dist/assets/images",
-    "build": "npm run scss:build && npm run copy",
-    "dev": "npm run prebuild && npm run copy && concurrently \"npm run scss\" \"npm run serve\"",
+    "build": "node api.js && npm run scss:build && npm run copy",
+    "dev": "node api.js && npm run prebuild && npm run copy && concurrently \"npm run scss\" \"npm run serve\"",
     "clean": "rimraf dist"
   },
   "dependencies": {
