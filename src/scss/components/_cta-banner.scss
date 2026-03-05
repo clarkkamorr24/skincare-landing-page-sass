@@ -1,0 +1,25 @@
+.cta-banner {
+  padding: $spacing-md $spacing-sm;
+  background-color: $color-bg-light;
+
+  &__pill {
+    @include container;
+    background-color: $color-secondary;
+    border-radius: $border-radius-pill;
+    padding: $spacing-sm $spacing-lg;
+    text-align: center;
+    font-family: $font-family-body;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-regular;
+    color: $color-primary;
+
+    @include respond-to('md') {
+      font-size: $font-size-base;
+      padding: $spacing-sm $spacing-xl;
+    }
+
+    u {
+      text-underline-offset: 3px;
+    }
+  }
+}
