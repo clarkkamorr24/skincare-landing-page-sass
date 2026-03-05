@@ -1,0 +1,80 @@
+.btn {
+  @include button-base;
+
+  &--primary {
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-color: $color-secondary;
+
+    &:hover {
+      background-color: darken($color-secondary, 8%);
+      border-color: darken($color-secondary, 8%);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+
+  &--outline-white {
+    background-color: transparent;
+    color: $color-white;
+    border-color: $color-white;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+
+  &--outline-yellow {
+    background-color: transparent;
+    color: $color-secondary;
+    border-color: $color-secondary;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-primary;
+    }
+  }
+
+  &--dark {
+    background-color: #222430;
+    color: $color-white;
+    border-color: #222430;
+    border-radius: 35px;
+    height: 46px;
+    min-width: 201px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+
+    &:hover {
+      background-color: lighten(#222430, 8%);
+      border-color: lighten(#222430, 8%);
+    }
+  }
+
+  &--sm {
+    border-radius: $border-radius-pill;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-xs;
+  }
+
+  &--lg {
+    border-radius: $border-radius-pill;
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-base;
+  }
+
+  &--block { width: 100%; }
+}
