@@ -22,7 +22,7 @@
 
 ```bash
 git clone <repository-url>
-cd skincare-sass
+cd skincare-landing-page-sass
 npm install
 ```
 
