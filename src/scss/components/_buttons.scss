@@ -13,13 +13,13 @@
   }
 
   &--outline {
-    background-color: transparent;
-    color: $color-primary;
+    background-color: $color-primary;
+    color: $color-white;
     border-color: $color-primary;
 
     &:hover {
-      background-color: $color-primary;
-      color: $color-white;
+      background-color: $color-bg-light;
+      color: $color-primary;
     }
   }
 
@@ -57,11 +57,6 @@
     align-items: center;
     justify-content: center;
     line-height: 1;
-
-    &:hover {
-      background-color: lighten(#222430, 8%);
-      border-color: lighten(#222430, 8%);
-    }
   }
 
   &--sm {
