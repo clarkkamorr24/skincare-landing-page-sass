@@ -35,6 +35,17 @@
     margin-bottom: $spacing-sm;
   }
 
+    &__tag-copy {
+    display: inline-block;
+    font-family: $font-family-body;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-primary;
+    margin-bottom: $spacing-sm;
+  }
+
   &__title {
     @include heading-style($font-size-2xl);
     color: $color-primary;
