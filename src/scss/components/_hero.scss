@@ -1,0 +1,148 @@
+.hero {
+  background-color: $color-bg-dark;
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    min-height: 500px;
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+
+    @include respond-to('md') {
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    @include respond-below('md') {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-heading;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: $spacing-sm;
+
+    @include respond-to('md') {
+      font-size: $font-size-4xl;
+    }
+
+    @include respond-to('lg') {
+      font-size: $font-size-5xl;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-family-body;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba($color-white, 0.7);
+    margin-bottom: $spacing-md;
+  }
+
+  &__cta {
+    margin-bottom: $spacing-xl;
+
+    @include respond-below('md') {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__testimonial {
+    margin-top: $spacing-lg;
+    border-top: 1px solid rgba($color-white, 0.15);
+    padding-top: $spacing-md;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 2px;
+    color: $color-secondary;
+    margin-bottom: $spacing-xs;
+
+    @include respond-below('md') {
+      justify-content: center;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__quote {
+    font-family: $font-family-body;
+    font-size: $font-size-sm;
+    color: rgba($color-white, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__reviewer {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    @include respond-below('md') {
+      justify-content: center;
+    }
+  }
+
+  &__reviewer-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: $border-radius-circle;
+    background-color: rgba($color-white, 0.2);
+    @include flex-center;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+  }
+
+  &__reviewer-name {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba($color-white, 0.7);
+  }
+
+  &__products {
+    position: relative;
+    @include flex-center;
+    min-height: 300px;
+
+    @include respond-below('md') {
+      margin-top: $spacing-lg;
+    }
+
+    @include respond-to('md') {
+      min-height: 400px;
+    }
+  }
+
+  &__product-img {
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+  }
+}
