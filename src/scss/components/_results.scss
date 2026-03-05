@@ -1,0 +1,110 @@
+.results {
+  @include section-padding;
+  background-color: $color-bg-light;
+  text-align: center;
+
+  &__content {
+    @include container;
+    max-width: $narrow-width;
+  }
+
+  &__title {
+    @include heading-style($font-size-2xl);
+    color: $color-primary;
+    margin-bottom: $spacing-sm;
+
+    @include respond-to('lg') {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__text {
+    @include body-text($font-size-sm);
+    color: $color-dark-gray;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__guarantee {
+    @include body-text($font-size-sm);
+    color: $color-dark-gray;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.quote-banner {
+  position: relative;
+  min-height: 400px;
+  @include flex-center;
+  overflow: hidden;
+
+  @include respond-to('lg') {
+    min-height: 500px;
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    @include image-cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba($color-black, 0.3), rgba($color-black, 0.6));
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    @include heading-style($font-size-2xl);
+    color: $color-white;
+    text-align: right;
+    max-width: 500px;
+    padding: $spacing-lg;
+
+    @include respond-to('md') {
+      font-size: $font-size-3xl;
+    }
+
+    @include respond-to('lg') {
+      font-size: $font-size-4xl;
+    }
+  }
+}
+
+.trust-marquee {
+  background-color: $color-bg-dark;
+  padding: $spacing-sm 0;
+  overflow: hidden;
+
+  &__track {
+    display: flex;
+    gap: $spacing-xl;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-family: $font-family-body;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-white;
+    flex-shrink: 0;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $color-secondary;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
