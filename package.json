@@ -1,4 +1,21 @@
 {
+  "name": "skincare-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/js/index.html",
+  "scripts": {
+    "scss": "sass --load-path=node_modules --watch src/scss/main.scss:dist/css/main.css --style compressed --source-map --quiet-deps --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
+    "scss:build": "sass --load-path=node_modules src/scss/main.scss:dist/css/main.css --style compressed --no-source-map --quiet-deps --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
+    "copy:html": "cpx \"src/*.html\" dist",
+    "copy:assets": "cpx \"src/assets/**/*\" dist/assets",
+    "copy:js": "cpx \"src/js/**/*\" dist/js",
+    "copy": "npm run copy:html && npm run copy:assets && npm run copy:js",
+    "serve": "browser-sync start --server dist --files \"dist/**/*\" --no-notify",
+    "prebuild": "mkdirp dist/css dist/js dist/assets/images",
+    "build": "npm run scss:build && npm run copy",
+    "dev": "npm run prebuild && npm run copy && concurrently \"npm run scss\" \"npm run serve\"",
+    "clean": "rimraf dist"
+  },
   "dependencies": {
     "flickity": "^3.0.0",
     "foundation-sites": "^6.9.0",
@@ -12,5 +29,8 @@
     "mkdirp": "^3.0.1",
     "rimraf": "^6.1.3",
     "sass": "^1.97.3"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
 }
