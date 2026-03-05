@@ -1,0 +1,41 @@
+/// @param {Number} $px 
+/// @param {Number} $base
+/// @return {Number} - Rem value
+@function rem($px, $base: 16) {
+  @return ($px / $base) * 1rem;
+}
+
+
+/// @param {Number} $px 
+/// @param {Number} $base 
+/// @return {Number} - Em value
+@function em($px, $base: 16) {
+  @return ($px / $base) * 1em;
+}
+
+/// @param {Number} $multiplier 
+/// @return {Number} - Calculated spacing
+@function spacing($multiplier) {
+  @return $spacing-unit * $multiplier;
+}
+
+
+/// @param {String} $layer 
+/// @return {Number} - Z-index value
+@function z($layer) {
+  $layers: (
+    'dropdown': $z-index-dropdown,
+    'sticky':   $z-index-sticky,
+    'fixed':    $z-index-fixed,
+    'overlay':  $z-index-overlay,
+    'modal':    $z-index-modal,
+    'toast':    $z-index-toast,
+  );
+
+  @if map-has-key($layers, $layer) {
+    @return map-get($layers, $layer);
+  }
+
+  @warn "Unknown z-index layer: #{$layer}";
+  @return auto;
+}

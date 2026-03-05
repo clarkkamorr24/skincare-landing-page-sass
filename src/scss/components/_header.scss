@@ -102,3 +102,30 @@
     line-height: 1;
   }
 }
+
+.mobile-nav {
+  display: none;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-light-gray;
+
+  &--open { display: block; }
+
+  &__list {
+    padding: $spacing-sm;
+  }
+
+  &__link {
+    display: block;
+    padding: $spacing-sm;
+    font-family: $font-family-body;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-primary;
+    border-bottom: 1px solid $color-light-gray;
+    transition: color $transition-fast;
+
+    &:hover { color: $color-secondary; }
+  }
+}

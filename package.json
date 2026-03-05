@@ -2,7 +2,7 @@
   "name": "skincare-sass",
   "version": "1.0.0",
   "description": "",
-  "main": "src/js/index.html",
+  "main": "src/js/app.js",
   "scripts": {
     "scss": "sass --load-path=node_modules --watch src/scss/main.scss:dist/css/main.css --style compressed --source-map --quiet-deps --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
     "scss:build": "sass --load-path=node_modules src/scss/main.scss:dist/css/main.css --style compressed --no-source-map --quiet-deps --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
