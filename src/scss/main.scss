@@ -1,0 +1,19 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'foundation-sites/scss/foundation';
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+@include foundation-typography;
+
+@import 'flickity/css/flickity';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/grid';
+@import 'layout/sections';
+
+
