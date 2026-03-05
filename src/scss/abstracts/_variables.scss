@@ -1,0 +1,93 @@
+$color-primary:       #1B2028;
+$color-primary-light: #242C36;
+$color-secondary:     #FFBA00;
+$color-accent:        #FFBA00;
+
+$color-bg-dark:       #1B2028;
+$color-bg-light:      #EFF7FA;
+$color-bg-white:      #FFFFFF;
+
+$color-white:         #FFFFFF;
+$color-off-white:     #F0F4F8;
+$color-light-gray:    #D1D9E0;
+$color-mid-gray:      #8A929A;
+$color-dark-gray:     #4A5568;
+$color-charcoal:      #2E302E;
+$color-black:         #0D1117;
+
+
+$font-family-heading:  'Inter', 'Helvetica Neue', sans-serif;
+$font-family-body:     'Roboto Mono', 'Courier New', monospace;
+$font-family-accent:   'Inter', sans-serif;
+
+$font-weight-light:    300;
+$font-weight-regular:  400;
+$font-weight-medium:   500;
+$font-weight-semibold: 600;
+$font-weight-bold:     700;
+$font-weight-black:    900;
+
+$font-size-xs:    0.75rem;
+$font-size-sm:    0.875rem;
+$font-size-base:  1.125rem; 
+$font-size-md:    1.25rem;
+$font-size-lg:    1.25rem;
+$font-size-xl:    1.5rem;
+$font-size-2xl:   2rem;
+$font-size-3xl:   2.5rem;
+$font-size-4xl:   3rem;
+$font-size-5xl:   3.5rem;
+$font-size-6xl:   4.5rem;
+$font-size-7xl:   5rem;    
+
+$line-height-tight:   1.1;
+$line-height-normal:  1.5;
+$line-height-relaxed: 1.75;
+
+$spacing-unit: 8px;
+
+$spacing-xs:   $spacing-unit;
+$spacing-sm:   $spacing-unit * 2;
+$spacing-md:   $spacing-unit * 3;
+$spacing-lg:   $spacing-unit * 4;
+$spacing-xl:   $spacing-unit * 6;
+$spacing-2xl:  $spacing-unit * 8;
+$spacing-3xl:  $spacing-unit * 10;
+$spacing-4xl:  $spacing-unit * 12;
+
+
+$max-width:        1440px;
+$content-width:    1200px;
+$narrow-width:     800px;
+
+$border-radius-sm:  4px;
+$border-radius-md:  8px;
+$border-radius-lg:  12px;
+$border-radius-xl:  16px;
+$border-radius-pill: 50px;
+$border-radius-circle: 50%;
+
+$border-width: 1px;
+$border-color: $color-light-gray;
+
+$shadow-sm:   0 1px 3px rgba($color-black, 0.1);
+$shadow-md:   0 4px 12px rgba($color-black, 0.12);
+$shadow-lg:   0 8px 24px rgba($color-black, 0.15);
+$shadow-xl:   0 16px 48px rgba($color-black, 0.2);
+
+$transition-fast:     150ms ease;
+$transition-base:     300ms ease;
+
+$z-index-dropdown:    100;
+$z-index-sticky:      200;
+$z-index-fixed:       300;
+$z-index-overlay:     400;
+$z-index-modal:       500;
+$z-index-toast:       600;
+
+$breakpoint-sm:  640px;
+$breakpoint-md:  768px;
+$breakpoint-lg:  1024px;
+$breakpoint-xl:  1200px;
+$breakpoint-2xl: 1440px;
+
