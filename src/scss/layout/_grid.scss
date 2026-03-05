@@ -1,0 +1,13 @@
+.container {
+  @include container;
+}
+
+.container--narrow {
+  @include container;
+  max-width: $narrow-width;
+}
+
+.container--wide {
+  @include container;
+  max-width: $max-width;
+}
