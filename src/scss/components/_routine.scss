@@ -1,0 +1,76 @@
+
+.routine {
+  @include section-padding;
+  background-color: $color-bg-light;
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    align-items: center;
+
+    @include respond-to('md') {
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-xl;
+    }
+  }
+
+  &__content {
+    @include respond-below('md') {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include heading-style($font-size-2xl);
+    color: $color-primary;
+    margin-bottom: $spacing-md;
+
+    @include respond-to('lg') {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  &__description {
+    @include body-text($font-size-sm);
+    color: $color-dark-gray;
+    margin-bottom: $spacing-md;
+    line-height: $line-height-relaxed;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    @include respond-below('md') {
+      align-items: center;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-size: $font-size-sm;
+    color: $color-primary;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: $color-primary;
+      flex-shrink: 0;
+    }
+  }
+
+  &__image-side {
+    @include flex-center;
+    position: relative;
+  }
+
+  &__image {
+    max-width: 100%;
+    border-radius: $border-radius-lg;
+  }
+}
